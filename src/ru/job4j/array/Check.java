@@ -6,6 +6,7 @@ public class Check {
         for (boolean flag : data) {
             if (data[0] != flag) {
                 result = false;
+                break;
             }
         }
         return result;
