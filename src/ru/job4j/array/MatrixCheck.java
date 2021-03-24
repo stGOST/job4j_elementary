@@ -36,7 +36,7 @@ public class MatrixCheck {
         for (int cell = 0; cell < board.length; cell++) {
             if (board[cell][cell] == 'X') {
                 result = monoHorizontal(board, cell) || monoVertical(board, cell);
-                break;
+                //break;
             }
         }
         return result;
