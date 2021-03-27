@@ -3,6 +3,8 @@ package ru.job4j.condition;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static java.lang.Math.sqrt;
+
 public class PointTest {
 
     @Test
@@ -35,5 +37,14 @@ public class PointTest {
         int expected = 0;
         double out = Point.distance(0, 0, 0, 0);
         Assert.assertEquals(expected, out, 0.01);
+    }
+
+    @Test
+    public void when000to111() {
+        double expected = sqrt(3);
+        Point point0 = new Point(0, 0, 0);
+        Point point1 = new Point(1, 1, 1);
+        double actual = point0.distance3d(point1);
+        Assert.assertEquals(expected, actual, 0.001);
     }
 }
